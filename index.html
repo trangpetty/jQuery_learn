@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/jquery-3.6.1.min.js"></script>    
+    <script src="/main.js" type="text/javascript"></script>
+    <title>jQuery</title>
+</head>
+<body>
+    <div class="btn btn-success toggle-calc m-3">Calculator</div>
+    <div class="btn btn-dark toggle-list m-3">TODO List</div>
+    <div class="toggle-color btn btn-info text-white">
+        <span>Random Color</span>
+        <i class="fas fa-droplet"></i>
+    </div>
+    <!-- Calculator -->
+    <div class="calc my-2">
+        <form name="form">
+            <input class="calc-display">
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" value="C" onclick="c()" class="bg-warning"></td>
+                <td><input type="button" value="/" onclick="insert('/')"></td>
+                <td><input type="button" value="<" onclick="del()"></td>
+                <td><input type="button" value="X" onclick="insert('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="insert(7)"></td>
+                <td><input type="button" value="8" onclick="insert(8)"></td>
+                <td><input type="button" value="9" onclick="insert(9)"></td>
+                <td><input type="button" value="-" onclick="insert('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="insert(4)"></td>
+                <td><input type="button" value="5" onclick="insert(5)"></td>
+                <td><input type="button" value="6" onclick="insert(6)"></td>
+                <td><input type="button" value="+" onclick="insert('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="insert(1)"></td>
+                <td><input type="button" value="2" onclick="insert(2)"></td>
+                <td><input type="button" value="3" onclick="insert(3)"></td>
+                <td rowspan=2><input type="button" value="=" onclick="eql()" style="height:6rem"></td>
+            </tr>
+            <tr >
+                <td colspan=2><input type="button" value="0" onclick="insert(0)" style="width:6.25rem;"></td>
+                <td><input type="button" value="." onclick="insert('.')"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <!-- To do List -->
+        <div class="list">
+            <h1 class="w-100 px-3">Todo List</h1>
+            <input type="text" placeholder="Add New" class="input-todo w-100 p-2 border-0">
+            <ul class="m-0">
+                <li>
+                    Suit Up
+                    <i class="fa fa-trash float-end mx-3"></i>
+                </li>
+                <li>
+                    See my boyfriend
+                    <i class="fa fa-trash float-end mx-3"></i>
+                </li>
+                <li>
+                    Become a intern front-end
+                    <i class="fa fa-trash float-end mx-3"></i>
+                </li>
+            </ul>
+        </div> 
+        <!-- Toggle Dark -->
+        <button class="toggle-dark" id="toggle-btn">
+            <span>Dark Mode</span>
+            <i class="fas fa-moon ps-1"></i>
+        </button>
+        <!-- Color Change -->
+        <div class="box-color d-flex rounded" id="box_color">
+            <div class="color-preview"></div>
+            <div class="color-control p-4">
+                <div class="input-box d-flex">
+                    <input type="text" class="input-color rounded-start p-2 fw-bold" value="#ed145b" readonly>
+                    <button class="copy-btn px-2 py-1 rounded-end">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <button class="generate-btn w-100 mt-2 p-1 btn btn-dark">Generate</button>
+            </div>
+        </div>
+
+        <!-- Login -->
+        <div class="w-75 bg-light shadow-lg p-3">
+            <h2 class="text-center">Login</h2>
+            <form>
+                <div class="my-2 d-flex">
+                    <i class="far fa-envelope position-absolute"></i>
+                    <input type="text" name="username" placeholder="Enter username" class="w-100 input-form rounded">
+                </div>
+                <div class="my-2">
+                        <div class="d-flex">
+                            <i class="fa fa-key position-absolute"></i>
+                            <input type="password" name="password" placeholder="Enter password" class="w-100 input-form rounded">
+                            <button type="button" class="show_password btn border-0">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+        
+</body>
+</html>
