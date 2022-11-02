@@ -131,8 +131,12 @@ li:nth-child(2n) {
 .input-form {
     padding: 0.5rem 1rem;
     border: 0;
-    border-bottom: 1px solid #333;
+    background-color: rgba(244, 194, 194, 0.2);
     outline: none;
+}
+
+.input-form::placeholder {
+    color: pink;
 }
 
 .show_password {
@@ -154,7 +158,7 @@ li:nth-child(2n) {
 
 @media screen and (max-width: 768px) {
     .calc {
-        width: 41%;
+        width: 40%;
     }
 }
 

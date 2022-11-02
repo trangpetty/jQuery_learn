@@ -96,20 +96,17 @@
         </div>
 
         <!-- Login -->
-        <div class="w-75 bg-light shadow-lg p-3">
-            <h2 class="text-center">Login</h2>
+        <div class="w-75 bg-light shadow-lg p-3 rounded mt-4">
+            <h2 class="text-center" style="color: rgb(245, 112, 134);">Login</h2>
             <form>
                 <div class="my-2 d-flex">
-                    <i class="far fa-envelope position-absolute"></i>
-                    <input type="text" name="username" placeholder="Enter username" class="w-100 input-form rounded">
+                    <input type="text" name="username" placeholder="Enter username" class="w-100 input-form rounded-pill">
                 </div>
                 <div class="my-2">
-                        <div class="d-flex">
-                            <i class="fa fa-key position-absolute"></i>
-                            <input type="password" name="password" placeholder="Enter password" class="w-100 input-form rounded">
-                            <button type="button" class="show_password btn border-0">
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
+                        <div class="">
+                            <input type="password" id="password" name="password" placeholder="Enter password" class="w-100 input-form rounded-pill">
+                            <br>
+                            <button type="button" id="show_password" name="show_password" class="btn btn-secondary rounded-pill mt-1">Show</button>
                     </div>
                 </div>
             </form>

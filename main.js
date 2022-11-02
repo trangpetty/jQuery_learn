@@ -81,8 +81,17 @@ $(document).ready(function(){
         document.execCommand("copy");
     })
 
-    // 
-    $('.show_password').click(function() {
-        $(this).find("i").toggleClass("fa-eye fa-eye-slash")
-    })
   });
+
+  $('#show_password').click(function() {
+    var password = $('#password');
+    var passwordField = password.attr('type');
+    if(passwordField == 'password') {
+        password.attr('type', 'text');
+        $(this).text('Hide');
+    }
+    else {
+        password.attr('type', 'password');
+        $(this).text('Show');
+    }
+})
